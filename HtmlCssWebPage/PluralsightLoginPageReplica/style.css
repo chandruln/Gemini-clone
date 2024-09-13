@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background: #181818;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#right{
+    flex: 1;
+}
+
+/* Sign in */
+#signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+#signin form{
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin .logo{
+    margin-bottom: 8vh;
+}
+
+#signin .logo img{
+    width: 300px;
+    height: 140px;
+}
+
+#signin label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#signin .text-input{
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 0.6rem 1rem;
+    line-height: 1.3rem;
+}
+
+#signin .primary-btn{
+    width: 100%;
+}
+
+#signin .secondary-btn,
+.or,
+.links{
+    width: 60%;
+}
+
+#signin .or{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+#signin .or .bar{
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #ccc;
+}
+
+#signin .or span{
+    color: #ccc;
+    padding: 0 0.8rem;
+}
+
+#showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/bg.jpg') no-repeat center center / cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#left-showcase{
+    display: none;
+}
+
+#showcase .showcase-text{
+    font-size: 3rem;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 1.4rem;
+}
+
+#showcase .secondary-btn{
+    width: 60%;
+    margin: auto;
+}
+
+#main-footer{
+    color: #ccc;
+    text-align: center;
+    max-width: 80%;
+    font-size: 14px;
+    padding-top: 80px;
+}
+
+#main-footer a{
+    color: #f96816;
+    text-decoration: underline;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.primary-btn{
+    padding: 8px 16px;
+    height: 35px;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background-color: #f96816;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.primary-btn:hover{
+    background-color: #ff7b39;
+}
+
+.secondary-btn{
+    padding: 8px 16px;
+    height: 35px;
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.secondary-btn:hover{
+    border-color: #ff7b39;
+    color: #ff7b39;
+}
+
+/* Media Queries */
+@media(min-width: 1200px) {
+    #left{
+        flex:4;
+    }
+    #right{
+        flex:6;
+    }
+}
+
+@media(max-width: 760px){
+    body{
+        overflow: auto;
+        background-color: 181818;
+    }
+
+    #right{
+        display: none;
+    }
+
+    #left{
+        justify-content: start;
+        margin-top: 4vh;
+    }
+
+    #signin{
+        width: 110%;
+    }
+
+    #signin .logo{
+        margin-bottom: 2vh;
+    }
+
+    #signin .text-input{
+        margin-bottom: 0.7rem;
+    }
+
+    #left-showcase{
+        display: flex;
+        margin: 3rem 0;
+        padding: 14rem 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #left-showcase .showcase-text{
+        font-size: 2rem;
+        width: 100%;
+        color: #fff;
+        margin: 1.4rem auto;
+    }
+    
+    #left-showcase .secondary-btn{
+        width: 80%;
+        margin: auto;
+    }
+
+    #main-footer{
+        padding-top: 1rem;
+    }
+
+}
